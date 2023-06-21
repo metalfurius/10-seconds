@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+public class EndTrigger : MonoBehaviour
+{
+    public GameManager gameManager;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Player")){
+        GameManager.instance.CompleteLevel();
+        }
+        
+    }
+}
